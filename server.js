@@ -68,7 +68,7 @@ class Server {
 			let extention = path.extname(filename);
 			this.findFile(localPath, filename, res, extention);
 		}).listen(this.host.port, this.host.url);
-		this.log.info(`Starting web server ${this.host.app} at ${this.host.url}:${this.host.port}`)
+		this.log.info(`Starting web server ${this.host.path} at ${this.host.url}:${this.host.port}`)
 	}	
 	getFile(file, res, extention) {
 		fs.readFile(file, (err, contents) => {
